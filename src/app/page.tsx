@@ -39,7 +39,7 @@ export default function Home() {
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
             Use global keyboard shortcut to control Udemy video playback on
-            separate monitor/tab..
+            separate monitor/tab.
           </p>
         </a>
       </div>

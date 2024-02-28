@@ -40,7 +40,7 @@ export async function getMandiForDate(date: Date) {
           "ci_session=ba82s1v7v5bjl28iob51ic9gfrtiu4s8; _ga=GA1.3.1012873269.1709050128; _gid=GA1.3.631138435.1709050128; privacyPolicyAccepted=true; uniqueCode=20240581772; SERVERID=node1",
         "X-Requested-With": "XMLHttpRequest",
       },
-      body: `language=en&stateName=MAHARASHTRA&apmcName=--+Select+APMCs+--&commodityName=--+Select+Commodity+--&fromDate=${formattedDate}&toDate=${formattedDate}`,
+      body: `language=en&stateName=--+All+--&apmcName=--+Select+APMCs+--&commodityName=--+Select+Commodity+--&fromDate=${formattedDate}&toDate=${formattedDate}`,
     },
   );
 

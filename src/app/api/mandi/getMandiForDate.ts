@@ -1,6 +1,6 @@
 import { formatDate } from "date-fns";
 
-type MandiData = {
+export type MandiData = {
   id: string;
   state: string;
   apmc: string;

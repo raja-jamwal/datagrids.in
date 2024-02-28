@@ -13,16 +13,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { formatDate, subDays } from "date-fns";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+import { subDays } from "date-fns";
+import { MandiData } from "@/app/api/mandi/getMandiForDate";
+import { MandiTable } from "@/app/agri/MandiTable";
 
 async function AgriPage() {
   const states = await getStateCount();
@@ -90,52 +83,10 @@ async function AgriPage() {
           </SelectContent>
         </Select>
       </div>
-
-      <Table>
-        <TableCaption>
-          Trades for Date: {formatDate(date, "dd / MM / yyyy")}
-        </TableCaption>
-        <TableHeader>
-          <TableRow>
-            <TableHead className="w-[100px]">State</TableHead>
-            <TableHead>APMC</TableHead>
-            <TableHead>Commodity</TableHead>
-            <TableHead>Min Price (₹)</TableHead>
-            <TableHead>Average Price (₹)</TableHead>
-            <TableHead>Max Price (₹)</TableHead>
-            <TableHead>Arrivals</TableHead>
-            <TableHead>Traded</TableHead>
-            <TableHead>Date</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {mandiForDate.map((mandi) => (
-            <TableRow key={mandi.id}>
-              <TableCell className="font-medium">{mandi.state}</TableCell>
-              <TableCell>{mandi.apmc}</TableCell>
-              <TableCell>{mandi.commodity}</TableCell>
-              <TableCell className="text-right">
-                ₹{mandi.min_price.toLocaleString()} / {mandi.Commodity_Uom}
-              </TableCell>
-              <TableCell className="text-right">
-                ₹{mandi.modal_price.toLocaleString()} / {mandi.Commodity_Uom}
-              </TableCell>
-              <TableCell className="text-right">
-                ₹{mandi.max_price.toLocaleString()} / {mandi.Commodity_Uom}
-              </TableCell>
-              <TableCell className="text-right">
-                {mandi.commodity_arrivals.toLocaleString()}
-              </TableCell>
-              <TableCell className="text-right">
-                {mandi.commodity_traded.toLocaleString()}
-              </TableCell>
-              <TableCell className="text-right">
-                {formatDate(mandi.created_at, "dd/mm/yyyy")}
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+      <MandiTable
+        date={date}
+        mandiForDate={mandiForDate as any as MandiData[]}
+      />
     </div>
   );
 }

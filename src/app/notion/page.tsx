@@ -2,7 +2,7 @@ import React from "react";
 import { listNotionDatabases } from "@/app/lib/lib";
 import { get } from "lodash";
 import { DbList } from "@/app/notion/DbList";
-import GoBack from "@/app/notion/GoBack";
+import GoBack from "@/components/GoBack";
 
 async function Notion() {
   const notionDatabases = await listNotionDatabases();

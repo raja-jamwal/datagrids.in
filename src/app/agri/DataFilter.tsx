@@ -27,8 +27,8 @@ export function DataFilter({ states, apmcs, commodities }: DataFilterProps) {
       }
       const params: any = {
         state: searchParams.get("state") || "",
-        apmc: searchParams.get("apmc") || "",
-        comm: searchParams.get("comm") || "",
+        // apmc: searchParams.get("apmc") || "",
+        // comm: searchParams.get("comm") || "",
       };
       params[param] = value;
       router.push("/agri?" + new URLSearchParams(params).toString());
@@ -49,30 +49,30 @@ export function DataFilter({ states, apmcs, commodities }: DataFilterProps) {
           ))}
         </SelectContent>
       </Select>
-      <Select onValueChange={navigate("apmc")}>
-        <SelectTrigger className="w-[180px]">
-          <SelectValue placeholder="All APMC" />
-        </SelectTrigger>
-        <SelectContent>
-          {apmcs.map((apmc) => (
-            <SelectItem key={apmc.apmc} value={apmc.apmc}>
-              {apmc.apmc}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-      <Select onValueChange={navigate("comm")}>
-        <SelectTrigger className="w-[180px]">
-          <SelectValue placeholder="All Commodities" />
-        </SelectTrigger>
-        <SelectContent>
-          {commodities.map((com) => (
-            <SelectItem key={com.commodity} value={com.commodity}>
-              {com.commodity}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
+      {/*<Select onValueChange={navigate("apmc")}>*/}
+      {/*  <SelectTrigger className="w-[180px]">*/}
+      {/*    <SelectValue placeholder="All APMC" />*/}
+      {/*  </SelectTrigger>*/}
+      {/*  <SelectContent>*/}
+      {/*    {apmcs.map((apmc) => (*/}
+      {/*      <SelectItem key={apmc.apmc} value={apmc.apmc}>*/}
+      {/*        {apmc.apmc}*/}
+      {/*      </SelectItem>*/}
+      {/*    ))}*/}
+      {/*  </SelectContent>*/}
+      {/*</Select>*/}
+      {/*<Select onValueChange={navigate("comm")}>*/}
+      {/*  <SelectTrigger className="w-[180px]">*/}
+      {/*    <SelectValue placeholder="All Commodities" />*/}
+      {/*  </SelectTrigger>*/}
+      {/*  <SelectContent>*/}
+      {/*    {commodities.map((com) => (*/}
+      {/*      <SelectItem key={com.commodity} value={com.commodity}>*/}
+      {/*        {com.commodity}*/}
+      {/*      </SelectItem>*/}
+      {/*    ))}*/}
+      {/*  </SelectContent>*/}
+      {/*</Select>*/}
     </>
   );
 }

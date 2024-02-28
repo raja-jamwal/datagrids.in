@@ -1,5 +1,5 @@
 import React from "react";
-import GoBack from "@/app/notion/GoBack";
+import GoBack from "@/components/GoBack";
 
 function Page() {
   return (

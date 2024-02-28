@@ -10,9 +10,17 @@ import { subDays } from "date-fns";
 import { MandiData } from "@/app/api/mandi/getMandiForDate";
 import { MandiTable } from "@/app/agri/MandiTable";
 import { DataFilter } from "@/app/agri/DataFilter";
+import GoBack from "@/components/GoBack";
 
-async function AgriPage({ searchParams }) {
-  console.log("searchParams", searchParams);
+type AgriPageProps = {
+  searchParams: {
+    state: string;
+    apmc: string;
+    comm: string;
+  };
+};
+
+async function AgriPage({ searchParams }: AgriPageProps) {
   const { state, apmc, comm } = searchParams;
   const states = await getStateCount();
   const apmcs = await getApmcCount();
@@ -21,8 +29,9 @@ async function AgriPage({ searchParams }) {
   date.setHours(0, 0, 0, 0);
   const mandiForDate = await getMandiForDate(date, state, apmc, comm);
   return (
-    <div className="flex flex-col gap-y-2">
-      <h1 className="text-xl">Commodity data from Mandies</h1>
+    <div className="flex flex-col gap-y-2 m-8">
+      <GoBack />
+      <h1 className="text-xl">Commodity Online</h1>
       <div className="flex flex-row space-x-2">
         <DbStat
           title="State"

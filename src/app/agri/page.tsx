@@ -6,24 +6,20 @@ import {
   getMandiForDate,
   getStateCount,
 } from "@/app/agri/agri-lib";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { subDays } from "date-fns";
 import { MandiData } from "@/app/api/mandi/getMandiForDate";
 import { MandiTable } from "@/app/agri/MandiTable";
+import { DataFilter } from "@/app/agri/DataFilter";
 
-async function AgriPage() {
+async function AgriPage({ searchParams }) {
+  console.log("searchParams", searchParams);
+  const { state, apmc, comm } = searchParams;
   const states = await getStateCount();
   const apmcs = await getApmcCount();
   const commodities = await getCommodityCount();
   const date = subDays(new Date(), 1);
   date.setHours(0, 0, 0, 0);
-  const mandiForDate = await getMandiForDate(date);
+  const mandiForDate = await getMandiForDate(date, state, apmc, comm);
   return (
     <div className="flex flex-col gap-y-2">
       <h1 className="text-xl">Commodity data from Mandies</h1>
@@ -46,42 +42,7 @@ async function AgriPage() {
       </div>
 
       <div className="flex flex-row gap-2">
-        <Select>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="All States" />
-          </SelectTrigger>
-          <SelectContent>
-            {states.map((state) => (
-              <SelectItem key={state.state} value={state.state}>
-                {state.state}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-        <Select>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="All APMC" />
-          </SelectTrigger>
-          <SelectContent>
-            {apmcs.map((apmc) => (
-              <SelectItem key={apmc.apmc} value={apmc.apmc}>
-                {apmc.apmc}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-        <Select>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="All Commodities" />
-          </SelectTrigger>
-          <SelectContent>
-            {commodities.map((com) => (
-              <SelectItem key={com.commodity} value={com.commodity}>
-                {com.commodity}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        <DataFilter states={states} apmcs={apmcs} commodities={commodities} />
       </div>
       <MandiTable
         date={date}

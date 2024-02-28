@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { subDays } from "date-fns";
 import { PrismaClient } from "@prisma/client";
 import { getMandiForDate } from "@/app/api/mandi/getMandiForDate";
+import { revalidatePath } from "next/cache";
 
 export async function GET(req: NextRequest) {
   let dateString = req.nextUrl.searchParams.get("date") as string;
@@ -28,6 +29,7 @@ export async function GET(req: NextRequest) {
   const existingIds = existingMandis.map((mandi) => mandi.id);
   const newMandis = mandis
     .filter((mandi) => !existingIds.includes(mandi.id))
+    .filter((mandi) => parseInt(mandi.min_price) > 0)
     .map((mandi) => ({
       id: mandi.id,
       state: mandi.state,
@@ -49,6 +51,8 @@ export async function GET(req: NextRequest) {
       skipDuplicates: true,
     });
   }
+
+  revalidatePath("/agri");
 
   return NextResponse.json(
     {

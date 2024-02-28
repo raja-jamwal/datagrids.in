@@ -33,8 +33,8 @@ export function MandiTable(props: { date: Date; mandiForDate: MandiData[] }) {
     page * pageSize,
   );
   const Options = Array.from({ length: totalPages }).map((_, i) => (
-    <SelectItem key={i} value={i.toString()}>
-      {i}
+    <SelectItem key={i} value={(i + 1).toString()}>
+      {i + 1}
     </SelectItem>
   ));
 

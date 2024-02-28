@@ -12,7 +12,7 @@ async function callApi(date) {
   console.log(`Response for date ${formatDate}: ${data}`);
 }
 
-function main() {
+async function main() {
   if (process.argv.length !== 4) {
     console.error(
         "Please provide from and to dates, e.g. cli/store_mandis.mjs 2021-01-01 2021-01-31",
@@ -26,8 +26,10 @@ function main() {
   const dateInterval = eachDayOfInterval({start: fromDate, end: toDate});
   console.log(`Fetching data for ${dateInterval.length} days`);
 
-  for (const date of dateInterval) {
-    callApi(date);
+  for (let i = 0; i < dateInterval.length; i++) {
+    const date = dateInterval[i];
+    console.log(`[${i}/${dateInterval.length}] ${format(date, "yyyy-MM-dd")}`);
+    await callApi(date);
   }
 }
 

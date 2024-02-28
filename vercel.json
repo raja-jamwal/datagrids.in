@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/mandi/save",
+      "schedule": "0 16 * * *"
+    }
+  ]
+}

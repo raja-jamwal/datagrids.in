@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Mandi {
+  id                 String   @id
+  state              String
+  apmc               String
+  commodity          String
+  min_price          Int
+  modal_price        Int
+  max_price          Int
+  commodity_arrivals Int
+  commodity_traded   Int
+  created_at         DateTime
+  status             String
+  Commodity_Uom      String
+}

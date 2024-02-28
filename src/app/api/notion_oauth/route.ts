@@ -6,7 +6,7 @@ import { cookies } from "next/headers";
 const notion = new Client();
 
 export async function GET(req: NextRequest) {
-  let code = req.nextUrl.searchParams.get("code") as string;
+  const code = req.nextUrl.searchParams.get("code") as string;
   if (!code) {
     return NextResponse.redirect(
       `https://api.notion.com/v1/oauth/authorize?client_id=${process.env.NOTION_CLIENT_ID}&response_type=code&owner=user&redirect_uri=${process.env.NOTION_REDIRECT_URI}`,

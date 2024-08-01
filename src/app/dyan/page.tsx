@@ -29,6 +29,9 @@ const DyanPage = () => {
     } else if (elem.msRequestFullscreen) {
       // IE/Edge
       elem.msRequestFullscreen();
+    } else if (elem.webkitEnterFullscreen) {
+      // iOS Safari
+      elem.webkitEnterFullscreen();
     }
   };
 

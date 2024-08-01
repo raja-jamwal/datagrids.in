@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Flame from "@/components/Flame";
 import { useMinDimension } from "@/hooks/useMaxDimention";
 import { Slider } from "@/components/ui/slider";
@@ -15,26 +15,28 @@ const DyanPage = () => {
 
   const [hidden, setHidden] = useState<boolean>(false);
   const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const requestFullScreen = () => {
-    const elem = document.documentElement as any;
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-    } else if (elem.mozRequestFullScreen) {
-      // Firefox
-      elem.mozRequestFullScreen();
-    } else if (elem.webkitRequestFullscreen) {
-      // Chrome, Safari and Opera
-      elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) {
-      // IE/Edge
-      elem.msRequestFullscreen();
-    } else if (elem.webkitEnterFullscreen) {
-      // iOS Safari
-      elem.webkitEnterFullscreen();
+    const video = videoRef.current as any;
+    if (video) {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.mozRequestFullScreen) {
+        // Firefox
+        video.mozRequestFullScreen();
+      } else if (video.webkitRequestFullscreen) {
+        // Chrome, Safari and Opera
+        video.webkitRequestFullscreen();
+      } else if (video.msRequestFullscreen) {
+        // IE/Edge
+        video.msRequestFullscreen();
+      } else if (video.webkitEnterFullscreen) {
+        // iOS Safari
+        video.webkitEnterFullscreen();
+      }
     }
   };
-
   const handleStart = () => {
     setHidden(true);
     requestFullScreen();
@@ -127,6 +129,7 @@ const DyanPage = () => {
           Start
         </Button>
       </div>
+      <video ref={videoRef} className="hidden"></video>
     </div>
   );
 };

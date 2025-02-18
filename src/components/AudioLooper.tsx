@@ -70,6 +70,7 @@ const AudioPlayer = () => {
       );
 
       // Store the timeouts in the state
+      // @ts-ignore
       setTimeouts((prevTimeouts) => [
         ...(holdTimeout ? [holdTimeout] : []),
         exhaleTimeout,

@@ -100,8 +100,8 @@ export default function PrivacyPolicy() {
           <p>
             <strong>DataGrid Softwares LLP</strong> follows a standard procedure
             of using log files. These files log visitors when they visit
-            websites. All hosting companies do this as part of hosting services'
-            analytics.
+            websites. All hosting companies do this as part of hosting
+            services&apos; analytics.
           </p>
 
           <p>
@@ -110,7 +110,7 @@ export default function PrivacyPolicy() {
             and time stamp, referring/exit pages, and possibly the number of
             clicks. These are not linked to any information that is personally
             identifiable. The purpose of the information is for analyzing
-            trends, administering the site, tracking users' movement on the
+            trends, administering the site, tracking users&apos; movement on the
             website, and gathering demographic information.
           </p>
 
@@ -120,15 +120,15 @@ export default function PrivacyPolicy() {
 
           <p>
             Like any other website, <strong>DataGrid Softwares LLP</strong> uses
-            'cookies'. These cookies are used to store information including
-            visitors' preferences, and the pages on the website that the visitor
-            accessed or visited.
+            &apos;cookies&apos;. These cookies are used to store information
+            including visitors&apos; preferences, and the pages on the website
+            that the visitor accessed or visited.
           </p>
 
           <p>
-            The information is used to optimize the users' experience by
-            customizing our web page content based on visitors' browser type
-            and/or other information.
+            The information is used to optimize the users&apos; experience by
+            customizing our web page content based on visitors&apos; browser
+            type and/or other information.
           </p>
 
           <h2>
@@ -140,8 +140,8 @@ export default function PrivacyPolicy() {
             JavaScript, or Web Beacons that are used in their respective
             advertisements and links that appear on{" "}
             <strong>DataGrid Softwares LLP</strong>, which are sent directly to
-            users' browsers. They automatically receive your IP address when
-            this occurs. These technologies are used to measure the
+            users&apos; browsers. They automatically receive your IP address
+            when this occurs. These technologies are used to measure the
             effectiveness of their advertising campaigns and/or to personalize
             the advertising content that you see on websites that you visit.
           </p>
@@ -157,10 +157,10 @@ export default function PrivacyPolicy() {
           </h2>
 
           <p>
-            <strong>DataGrid Softwares LLP</strong>'s Privacy Policy does not
-            apply to other advertisers or websites. Thus, we are advising you to
-            consult the respective Privacy Policies of these third-party ad
-            servers for more detailed information. It may include their
+            <strong>DataGrid Softwares LLP</strong>&apos;s Privacy Policy does
+            not apply to other advertisers or websites. Thus, we are advising
+            you to consult the respective Privacy Policies of these third-party
+            ad servers for more detailed information. It may include their
             practices and instructions about how to opt-out of certain options.
           </p>
 
@@ -168,7 +168,7 @@ export default function PrivacyPolicy() {
             You can choose to disable cookies through your individual browser
             options. This is recommended by dodopayments.com. To know more
             detailed information about cookie management with specific web
-            browsers, it can be found at the browsers' respective websites.
+            browsers, it can be found at the browsers&apos; respective websites.
           </p>
 
           <h2>
@@ -184,17 +184,17 @@ export default function PrivacyPolicy() {
 
           <ul>
             <li>
-              Request that a business that collects a consumer's personal data
-              disclose the categories and specific pieces of personal data that
-              a business has collected about consumers.
+              Request that a business that collects a consumer&apos;s personal
+              data disclose the categories and specific pieces of personal data
+              that a business has collected about consumers.
             </li>
             <li>
               Request that a business delete any personal data about the
               consumer that a business has collected.
             </li>
             <li>
-              Request that a business that sells a consumer's personal data, not
-              sell the consumer's personal data.
+              Request that a business that sells a consumer&apos;s personal
+              data, not sell the consumer&apos;s personal data.
             </li>
           </ul>
 
@@ -253,7 +253,7 @@ export default function PrivacyPolicy() {
           </p>
 
           <h2>
-            <strong>Children's Information</strong>
+            <strong>Children&apos;s Information</strong>
           </h2>
 
           <p>

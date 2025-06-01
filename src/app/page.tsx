@@ -1,4 +1,5 @@
 import Footer from '@/components/Footer';
+import Card from '@/components/Card';
 
 export default function Home() {
   return (
@@ -11,71 +12,43 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-          <a
-            href="https://chromewebstore.google.com/detail/cchndpkmgkeojnceagacponccndamhaj"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={`mb-3 text-2xl font-semibold`}>
-              ChatGPT Notion Exporter{" "}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Export nicely formatted ChatGPT conversations to Notion Database.
-            </p>
-          </a>
-          <a
+        <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
+          
+          <Card
             href="https://chromewebstore.google.com/detail/jcmmegbigehepgkipgbbeppciahdocko"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={`mb-3 text-2xl font-semibold`}>
-              Udemy Playback Control{" "}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Use global keyboard shortcut to control Udemy video playback on
-              separate monitor/tab.
-            </p>
-          </a>
-          <a
+            title="Udemy Playback Control"
+            description="Use global keyboard shortcut to control Udemy video playback on separate monitor/tab."
+            external
+          />
+          <Card
             href="/agri"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            rel="noopener noreferrer"
-          >
-            <h2 className={`mb-3 text-2xl font-semibold`}>
-              Commodity Daily Prices{" "}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Daily Prices of Commodities in APMC Mandis across India.
-            </p>
-          </a>
-          <a
+            title="Commodity Daily Prices"
+            description="Daily Prices of Commodities in APMC Mandis across India."
+          />
+          <Card
             href="https://www.mypromind.com/"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={`mb-3 text-2xl font-semibold`}>
-              ProMind{" "}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Master Any Subject with AI-Powered Adaptive Learning, memorize information 3x faster.
-            </p>
-          </a>
+            title="ProMind"
+            description="Master Any Subject with AI-Powered Adaptive Learning, memorize information 3x faster."
+            external
+          />
+          <Card
+            href="https://chromewebstore.google.com/detail/udemy-full-transcript-ext/pfomlffjejikgklcckocdfcahbjobhfo"
+            title="Udemy Transcript Extractor"
+            description="Extract complete course transcripts from Udemy for use with AI tools like ChatGPT, Claude & Gemini."
+            external
+          />
+          <Card
+            href="https://chromewebstore.google.com/detail/cchndpkmgkeojnceagacponccndamhaj"
+            title="ChatGPT Notion Exporter"
+            description="Export nicely formatted ChatGPT conversations to Notion Database."
+            external
+          />
+          <Card
+            href="https://chromewebstore.google.com/detail/mypromind-master-any-subj/fmhinmpjjpppfpgonikapfobhhkknaff"
+            title="MyProMind Chrome Extension"
+            description="Create AI-powered flashcards anywhere, anytime. Study smarter with adaptive learning algorithms."
+            external
+          />
         </div>
       </div>
       <Footer />

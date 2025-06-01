@@ -19,35 +19,48 @@ export default function Home() {
             title="Udemy Playback Control"
             description="Use global keyboard shortcut to control Udemy video playback on separate monitor/tab."
             external
+            status="active"
           />
           <Card
             href="/agri"
             title="Commodity Daily Prices"
             description="Daily Prices of Commodities in APMC Mandis across India."
+            status="discontinued"
           />
           <Card
             href="https://www.mypromind.com/"
             title="ProMind"
             description="Master Any Subject with AI-Powered Adaptive Learning, memorize information 3x faster."
             external
+            status="new"
+          />
+          <Card
+            href="https://github.com/raja-jamwal/maeti-fe"
+            title="Maeti"
+            description="Matrimonial app with Vedic recommendation engine. Project archived and discontinued."
+            external
+            status="discontinued"
           />
           <Card
             href="https://chromewebstore.google.com/detail/udemy-full-transcript-ext/pfomlffjejikgklcckocdfcahbjobhfo"
             title="Udemy Transcript Extractor"
             description="Extract complete course transcripts from Udemy for use with AI tools like ChatGPT, Claude & Gemini."
             external
+            status="active"
           />
           <Card
             href="https://chromewebstore.google.com/detail/cchndpkmgkeojnceagacponccndamhaj"
             title="ChatGPT Notion Exporter"
             description="Export nicely formatted ChatGPT conversations to Notion Database."
             external
+            status="active"
           />
           <Card
             href="https://chromewebstore.google.com/detail/mypromind-master-any-subj/fmhinmpjjpppfpgonikapfobhhkknaff"
             title="MyProMind Chrome Extension"
             description="Create AI-powered flashcards anywhere, anytime. Study smarter with adaptive learning algorithms."
             external
+            status="new"
           />
         </div>
       </div>

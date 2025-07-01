@@ -60,6 +60,13 @@ export default function Home() {
             external
             status="new"
           />
+          <Card
+            href="https://chromewebstore.google.com/detail/tabsense/dgaiaedeganggnkipliacmemcelfdhhc"
+            title="TabSense"
+            description="Automatically organize browser tabs into meaningful, contextual groups to improve productivity and reduce tab clutter."
+            external
+            status="new"
+          />
         </div>
       </div>
       <Footer />

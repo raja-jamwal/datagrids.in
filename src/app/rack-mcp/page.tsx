@@ -31,7 +31,7 @@ export default function RackMcpPage() {
 
         <div className="max-w-3xl text-sm text-muted-foreground">
           <p>
-            Security note: executes arbitrary Ruby code. Use in development only, don't expose publicly
+            Security note: executes arbitrary Ruby code. Use in development only, don&apos;t expose publicly
             without proper authentication and isolation.
           </p>
         </div>

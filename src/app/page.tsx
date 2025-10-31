@@ -61,6 +61,12 @@ export default function Home() {
             status="new"
           />
           <Card
+            href="/rack-mcp"
+            title="RackMcp MCP Server"
+            description="Ruby MCP server to give AI assistants Ruby code execution within your Rack apps."
+            status="new"
+          />
+          <Card
             href="https://chromewebstore.google.com/detail/tabsense/dgaiaedeganggnkipliacmemcelfdhhc"
             title="TabSense"
             description="Automatically organize browser tabs into meaningful, contextual groups to improve productivity and reduce tab clutter."

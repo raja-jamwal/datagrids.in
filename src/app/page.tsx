@@ -11,7 +11,12 @@ export default function Home() {
         </div>
 
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
-          
+          <Card
+            href="/rack-mcp"
+            title="RackMcp MCP Server"
+            description="Ruby MCP server to give AI assistants Ruby code execution within your Rack apps."
+            status="new"
+          />
           <Card
             href="https://chromewebstore.google.com/detail/jcmmegbigehepgkipgbbeppciahdocko"
             title="Udemy Playback Control"
@@ -58,12 +63,6 @@ export default function Home() {
             title="MyProMind Chrome Extension"
             description="Create AI-powered flashcards anywhere, anytime. Study smarter with adaptive learning algorithms."
             external
-            status="new"
-          />
-          <Card
-            href="/rack-mcp"
-            title="RackMcp MCP Server"
-            description="Ruby MCP server to give AI assistants Ruby code execution within your Rack apps."
             status="new"
           />
           <Card

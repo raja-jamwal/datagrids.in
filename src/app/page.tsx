@@ -12,6 +12,19 @@ export default function Home() {
 
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
           <Card
+            href="#"
+            title="Teleflow"
+            description="Native iOS teleprompter + camera recording app. Not yet on the App Store."
+            status="new"
+          />
+          <Card
+            href="https://getmultiplex.app"
+            title="Multiplex"
+            description="Native macOS multiplexer for many concurrent terminal / Claude Code sessions."
+            external
+            status="new"
+          />
+          <Card
             href="/rack-mcp"
             title="RackMcp MCP Server"
             description="Ruby MCP server to give AI assistants Ruby code execution within your Rack apps."
@@ -69,19 +82,6 @@ export default function Home() {
             href="https://chromewebstore.google.com/detail/tabsense/dgaiaedeganggnkipliacmemcelfdhhc"
             title="TabSense"
             description="Automatically organize browser tabs into meaningful, contextual groups to improve productivity and reduce tab clutter."
-            external
-            status="new"
-          />
-          <Card
-            href="#"
-            title="Teleflow"
-            description="Native iOS teleprompter + camera recording app. Not yet on the App Store."
-            status="new"
-          />
-          <Card
-            href="https://getmultiplex.app"
-            title="Multiplex"
-            description="Native macOS multiplexer for many concurrent terminal / Claude Code sessions."
             external
             status="new"
           />

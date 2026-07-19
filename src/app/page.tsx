@@ -72,6 +72,19 @@ export default function Home() {
             external
             status="new"
           />
+          <Card
+            href="#"
+            title="Teleflow"
+            description="Native iOS teleprompter + camera recording app. Not yet on the App Store."
+            status="new"
+          />
+          <Card
+            href="https://getmultiplex.app"
+            title="Multiplex"
+            description="Native macOS multiplexer for many concurrent terminal / Claude Code sessions."
+            external
+            status="new"
+          />
         </div>
       </div>
       <Footer />

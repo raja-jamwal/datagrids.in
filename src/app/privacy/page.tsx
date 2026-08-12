@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
       <div className="prose dark:prose-invert max-w-none">
         <div>
           <p>
-            Our Privacy Policy was last updated on <strong>18/02/2025</strong>.
+            Our Privacy Policy was last updated on <strong>12/08/2026</strong>.
           </p>
 
           <p>
@@ -30,8 +30,10 @@ export default function PrivacyPolicy() {
             <a href="datagrids.in" target="_blank" rel="noopener noreferrer">
               datagrids.in
             </a>
-            . This policy is not applicable to any information collected offline
-            or via channels other than this website.
+            . Except where stated otherwise, this policy is not applicable to
+            any information collected offline or via channels other than this
+            website. Our browser extensions are covered by the{" "}
+            <a href="#browser-extensions">Browser Extensions</a> section below.
           </p>
 
           <h2>
@@ -250,6 +252,114 @@ export default function PrivacyPolicy() {
           <p>
             If you make a request, we have one month to respond to you. If you
             would like to exercise any of these rights, please contact us.
+          </p>
+
+          <h2 id="browser-extensions">
+            <strong>Browser Extensions</strong>
+          </h2>
+
+          <p>
+            This section covers browser extensions published by{" "}
+            <strong>DataGrid Softwares LLP</strong>, currently{" "}
+            <strong>Notes Everywhere</strong>, an extension that lets you
+            highlight text on a web page and attach comment threads to it. It
+            applies in addition to the rest of this policy.
+          </p>
+
+          <h3>
+            <strong>We do not collect anything</strong>
+          </h3>
+
+          <p>
+            Notes Everywhere has no server. Your notes, the pages you visit and
+            the text you highlight are never transmitted to{" "}
+            <strong>DataGrid Softwares LLP</strong> or to anyone else. Nothing
+            is collected, sold, shared, or used for advertising or analytics.
+          </p>
+
+          <h3>
+            <strong>What the extension stores, and where</strong>
+          </h3>
+
+          <p>
+            Everything the extension saves is stored on your own computer using
+            Chrome&apos;s local extension storage:
+          </p>
+
+          <ul>
+            <li>
+              Your notes — the quoted text, your comments, colours and
+              timestamps.
+            </li>
+            <li>
+              The address of the page a note belongs to, so the note can be
+              found again.
+            </li>
+            <li>
+              Your Google name, email address and profile picture, only if you
+              choose to sign in.
+            </li>
+            <li>
+              Your Google sign-in token, only if you choose to sign in. It is
+              used solely to identify you to Google and is erased when you sign
+              out.
+            </li>
+          </ul>
+
+          <p>Uninstalling the extension deletes all of it.</p>
+
+          <h3>
+            <strong>Google sign-in is optional</strong>
+          </h3>
+
+          <p>
+            The extension works fully without signing in; notes are then
+            authored as “Local user”. If you do sign in, the extension requests
+            the openid, email and profile scopes and makes a single request to
+            Google&apos;s user information endpoint to read your name, email
+            address and picture. That information is used for one purpose —
+            putting your name on the comments you write — is stored only on your
+            device, and is not transmitted anywhere else. Signing out revokes
+            the token with Google and erases the stored profile.
+          </p>
+
+          <h3>
+            <strong>Why the extension needs access to pages you visit</strong>
+          </h3>
+
+          <p>
+            To attach a note to a phrase, the extension must read the text of
+            the page you are on; to display a note, it must draw on that page.
+            Page content is read inside your browser, used only to locate your
+            notes, and never transmitted. The permissions it requests are
+            storage (saving notes locally), identity (optional sign-in),
+            activeTab and contextMenus (the “Add note” action), and access to
+            the sites you choose to annotate.
+          </p>
+
+          <h3>
+            <strong>Notes are embedded in the page you are viewing</strong>
+          </h3>
+
+          <p>
+            By design, your notes are written into the page you are reading — as
+            a structured data block, as hidden semantic HTML, and through a
+            JavaScript interface — so that scripts and AI agents acting on your
+            behalf can read them. This happens only inside your own browser tab
+            and sends nothing to the website you are visiting. Please note that
+            other extensions installed in your browser, or scripts you
+            deliberately run against the page, can read this data, in the same
+            way they can read anything else on the page.
+          </p>
+
+          <h3>
+            <strong>Questions</strong>
+          </h3>
+
+          <p>
+            For anything relating to the privacy practices of our extensions,
+            contact us at{" "}
+            <a href="mailto:admin@datagrids.in">admin@datagrids.in</a>.
           </p>
 
           <h2>
